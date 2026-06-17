@@ -1,0 +1,25 @@
+{
+  "name": "idempotency-gateway",
+  "version": "1.0.0",
+  "description": "The following sequence diagram illustrates how the Idempotency Gateway handles incoming payment requests, manages state, and prevents double-charging and race conditions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/housebuoy/Idempotency-Gateway.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/housebuoy/Idempotency-Gateway/issues"
+  },
+  "homepage": "https://github.com/housebuoy/Idempotency-Gateway#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
