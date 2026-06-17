@@ -65,7 +65,7 @@ app.post('/process-payment', async(req, res) =>{
     setTimeout(() => {
         idempotencyKeyStore.delete(idempotencyKey);
         console.log(`Cleaned up key ${idempotencyKey} from memory.`);
-    }, 5000);
+    }, 24 * 60 * 60 * 1000);
 
     return res.status(201).json(responseBody); // the response from the server and in this case the status code for "Created" is 201 and sends it as a JSON object back to the client
 })

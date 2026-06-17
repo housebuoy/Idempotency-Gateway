@@ -44,3 +44,51 @@ sequenceDiagram
             API-->>Client: 200 OK Cached Response
         end
     end
+```
+
+## Setup Instructions
+
+### Prerequisites
+Before you begin, ensure you have **Node.js** and **npm** installed on your machine.
+
+### Installation & Execution
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/housebuoy/Idempotency-Gateway.git
+
+   cd Idempotency-Gateway
+   ```
+
+2. **Install the dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the server:**
+   ```bash
+   npm start
+   ```
+The server will start and listen on http://localhost:3000 by default.
+
+
+## API Documentation
+
+### Process Payment
+Processes a payment securely, guaranteeing that requests with the exact same `Idempotency-Key` are only charged once.
+
+* **URL:** `/process-payment`
+* **Method:** `POST`
+* **Headers:**
+  * `Content-Type: application/json`
+  * `Idempotency-Key: <unique-string>` **(Required)**
+
+* **Request Body:**
+  ```json
+  {
+    "amount": 250,
+    "currency": "GHS"
+  }
+  ```
+
+
