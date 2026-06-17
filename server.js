@@ -59,7 +59,8 @@ app.post('/process-payment', async(req, res) =>{
     idempotencyKeyStore.set(idempotencyKey, {
         originalRequest: req.body,
         status: "COMPLETED",
-        receipt: responseBody
+        receipt: responseBody,
+        statusCode: 201
     });
 
     setTimeout(() => {
